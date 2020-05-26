@@ -15,7 +15,7 @@ export class AddRoomsComponent implements OnInit {
   hostelrooms=[];
   hostelroomDto = {
     'costPerBed': 0,
-  'createdAt': {
+  /*'createdAt': { //not in design
     'date': 0,
     'day': 0,
     'hours': 0,
@@ -26,14 +26,14 @@ export class AddRoomsComponent implements OnInit {
     'time': 0,
     'timezoneOffset': 0,
     'year': 0
-  },
+  },*/
   'description': '',
   'hostelId': 0,
   'id': 0,
   'noOfBed': 0,
   'roomNo': 0,
   'roomTypeId': 0
-  //'title': ''
+  //'title': '' //not in design
   }
   isUpdate: boolean = false;
   roomtypeDto: any;
@@ -60,7 +60,7 @@ export class AddRoomsComponent implements OnInit {
   
 
   getHostelRoomList() {
-    this.hostelroomservice.getAllHostelRoomList().subscribe((res: any) => {
+    this.hostelroomservice.getList().subscribe((res: any) => {
       var data = res['data'];
       var content = data['content'];
       this.hostelrooms = content.map((key) => ({ ...key }));
@@ -74,7 +74,7 @@ export class AddRoomsComponent implements OnInit {
 
 
   addHostelRoom() {
-    this.hostelroomservice.saveHostelRoom(this.hostelroomDto).subscribe((res: any) => {
+    this.hostelroomservice.save(this.hostelroomDto).subscribe((res: any) => {
       if (res.success == true) {
         alert('section Saved Successfully');
       }
@@ -88,7 +88,7 @@ export class AddRoomsComponent implements OnInit {
 
 
   getHostelRoomById(hostelroomId) {
-    this.hostelroomservice.getHostelRoomById(hostelroomId).subscribe((res: any) => {
+    this.hostelroomservice.getById(hostelroomId).subscribe((res: any) => {
       this.hostelroomDto.costPerBed = res.data.costPerBed;
       this.hostelroomDto.id = res.data.id;
       this.hostelroomDto.description = res.data.description;
@@ -112,7 +112,7 @@ export class AddRoomsComponent implements OnInit {
   }
   updateHostelRoom(hostelroomId) {
 
-    this.hostelroomservice.updateHostelRoom(this.hostelroomDto, hostelroomId).subscribe((res: any) => {
+    this.hostelroomservice.update(this.hostelroomDto, hostelroomId).subscribe((res: any) => {
       // tslint:disable-next-line: triple-equals
       if (res.success == true) {
         alert('section Updated Successfully');
@@ -127,7 +127,7 @@ export class AddRoomsComponent implements OnInit {
   }
 
   deleteHostelRoom(hostelroomId) {
-    this.hostelroomservice.deleteHostelRoom(hostelroomId).subscribe((res: any) => {
+    this.hostelroomservice.delete(hostelroomId).subscribe((res: any) => {
       if (res.success == true) {
         alert('section deleted Successfully');
       }
