@@ -10,7 +10,7 @@ import { HomeworkRoutingModule } from "./Homework/homework-routing.module";
 import { TransportRoutingModule } from "./Transport/Transport-routing.module";
 import { FrontcmsRoutingModule } from "./Frontcms/Frontcms-routing.module";
 import { FeeCollectionRoutingModule } from "./feecollection/feecollection-routing.module";
-import { FrontofficeRoutingModule } from "./Frontoffice/FrontofficeRoutingModule";
+import { FrontofficeRoutingModule } from "./Frontoffice/Frontoffice-routing.module";
 import { CertificateRoutingModule } from "./certificate/certificate-routing.module";
 import { ReportsRoutingModule } from "./Reports/reports-routing.module";
 import { HumanResourceRoutingModule } from "./human_resource/human_resource-routing.module";

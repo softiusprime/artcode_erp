@@ -101,5 +101,11 @@ export class AddRoomTypeComponent implements OnInit {
       console.error(err);
     });
   }
+  clearData(){
+    this.roomtypeDto.id= 0,
+    this.roomtypeDto.isActive= 'yes',
+    this.roomtypeDto.roomType= '',
+    this.roomtypeDto.description=''
+  }
 }
 

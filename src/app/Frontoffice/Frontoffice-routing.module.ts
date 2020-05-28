@@ -1,4 +1,5 @@
-import { Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
 
 import { AdmissionComponent } from './Admission/Admission.component';
@@ -12,6 +13,8 @@ import { ComplainttypeComponent } from './setup/complainttype/complainttype.comp
 import { VisitorsPurposeComponent } from './setup/visitors-purpose/visitors-purpose.component';
 import { SourceComponent } from './setup/source/source.component';
 import { ReferenceComponent } from './setup/reference/reference.component';
+import { CommonModule } from '@angular/common';
+
 
 
 
@@ -27,9 +30,17 @@ export const routes: Routes = [
   { path: 'visitors-purpose', component: VisitorsPurposeComponent },
   { path: 'source', component: SourceComponent },
   { path: 'reference', component: ReferenceComponent },
-
-
-
 ];
+@NgModule({
+  declarations: [],
+  imports: [
+    CommonModule,
+    RouterModule.forChild(routes)
+  ]
+})
+
+export class FrontofficeRoutingModule {
+}
+
 
 

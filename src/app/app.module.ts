@@ -69,6 +69,7 @@ import { VisitorsPurposeComponent } from './Frontoffice/setup/visitors-purpose/v
 import { SourceComponent } from './Frontoffice/setup/source/source.component';
 import { ReferenceComponent } from './Frontoffice/setup/reference/reference.component';
 import { HostelModule } from './Reports/hostel/hostel.module';
+import { FrontofficeModule } from './Frontoffice/Frontoffice.module';
 
 @NgModule({
   declarations: [
@@ -133,6 +134,7 @@ import { HostelModule } from './Reports/hostel/hostel.module';
     CertificateModule,
     ReportsModule,
     AcademicsModule,
+    FrontofficeModule,
     HostelModule,
     RouterModule,
     FormsModule,
