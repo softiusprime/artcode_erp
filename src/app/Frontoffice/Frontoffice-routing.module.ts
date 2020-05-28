@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-
+import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from "@angular/forms";
+import { ReactiveFormsModule } from "@angular/forms";
 import { AdmissionComponent } from './Admission/Admission.component';
 import { VisitorbookComponent } from './visitorbook/visitorbook.component';
 import { calllogComponent} from './calllog/calllog.component';
@@ -13,12 +15,12 @@ import { ComplainttypeComponent } from './setup/complainttype/complainttype.comp
 import { VisitorsPurposeComponent } from './setup/visitors-purpose/visitors-purpose.component';
 import { SourceComponent } from './setup/source/source.component';
 import { ReferenceComponent } from './setup/reference/reference.component';
-import { CommonModule } from '@angular/common';
 
 
 
 
-export const routes: Routes = [
+
+const routes: Routes = [
    { path: 'Admission', component: AdmissionComponent},
   { path: 'visitorbook', component: VisitorbookComponent},
   { path: 'calllog', component: calllogComponent},
@@ -34,13 +36,11 @@ export const routes: Routes = [
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule,
+    CommonModule, BrowserModule, FormsModule, ReactiveFormsModule,
     RouterModule.forChild(routes)
   ]
 })
-
 export class FrontofficeRoutingModule {
 }
-
 
 

@@ -3,9 +3,7 @@ import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-
 import { HttpClientModule } from "@angular/common/http";
-
 import { FormsModule } from "@angular/forms";
 import { ReactiveFormsModule } from "@angular/forms";
 
@@ -77,7 +75,7 @@ import { FrontofficeModule } from './Frontoffice/Frontoffice.module';
     HomeComponent,
     ParentinfoComponent,
     TeacherinfoComponent,
-
+   
     ParentsdetailsComponent,
     AddHomeworkComponent,
     SearchHomeworkComponent,

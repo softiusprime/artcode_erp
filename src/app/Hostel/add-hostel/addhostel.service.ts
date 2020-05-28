@@ -33,4 +33,7 @@ export class AddhostelService {
   getById(Id): any {
     return this.http.get('http://yamistha.cloudjiffy.net/hostel/' + Id);
   }
+  
+
+  
 }
