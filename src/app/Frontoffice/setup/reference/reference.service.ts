@@ -18,8 +18,6 @@ export class ReferenceService {
   }
 
   delete(Id): any {
-
-    console.log(this.url + Id);
     return this.http.delete(this.url + Id);
   }
 
